@@ -1,5 +1,6 @@
-.body{
-    background: #E5E5E5    
+
+body{
+    background: #F3F3F3 
 }
 
 .nav-bar{
@@ -26,9 +27,9 @@
 }
 
 .message-area{
-    background: #F3F3F3;
     margin-top: 106px;
     margin-bottom: 106px;
+    background: #E5E5E5 
 }
 
 .message-box{
