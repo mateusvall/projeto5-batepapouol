@@ -50,7 +50,7 @@ function processarResposta(resposta){
                 }
             } 
     }
-    const qtyMessages = all_messages.length;
+    const qtyMessages = document.querySelectorAll('.message-content').length;
     const lastMessage = document.querySelectorAll('.message-content')[qtyMessages-1];
     lastMessage.scrollIntoView();
 }
@@ -91,6 +91,22 @@ function connectionOk(){
 
 }
 
+function sendMessage(){
+    const message = document.querySelector('.send-message input').value;
+
+    const messageAPI = {
+        from: username,
+        to: "Todos",
+        text: message,
+        type: "message"
+    }
+    const request = axios.post('https://mock-api.driven.com.br/api/v6/uol/messages', messageAPI);
+
+    request.then(getMessages)
+
+    document.querySelector('.send-message input').value = '';
+
+}
 
 
 
